@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:surrealconvo/pallete.dart';
+import 'package:surrealconvo/profileimage.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -22,8 +23,10 @@ class _HomePageState extends State<HomePage> {
         leading: const Icon(Icons.menu),
       ),
       body: const Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.min,
         children: [
-          
+          ProfileImage(),
         ],
       ),
     );
