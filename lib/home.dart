@@ -58,6 +58,10 @@ class _HomePageState extends State<HomePage> {
           ),
           Container(
             padding: const EdgeInsets.all(10),
+            margin: const EdgeInsets.only(
+              top: 10,
+              left: 22,
+            ),
             alignment: Alignment.centerLeft,
             child: const Text(
               "Here are a few features",
@@ -68,6 +72,11 @@ class _HomePageState extends State<HomePage> {
                 fontWeight: FontWeight.bold,
               ),
             ),
+          ),
+          Column(
+            children: [
+              
+            ],
           ),
         ],
       ),
