@@ -7,7 +7,9 @@ void main() {
     MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Surreal Convo",
-      theme: ThemeData.light().copyWith(
+      theme: ThemeData.light(
+        useMaterial3: true,
+       ).copyWith(
         scaffoldBackgroundColor: Pallete.whiteColor,
       ),
       home: const Scaffold(

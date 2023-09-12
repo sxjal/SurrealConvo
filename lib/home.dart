@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:surrealconvo/pallete.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -10,6 +11,16 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return Scaffold(
+      backgroundColor: Pallete.whiteColor,
+      appBar: AppBar(
+        centerTitle: true,
+        backgroundColor: Pallete.whiteColor,
+        foregroundColor: Pallete.blackColor,
+        shadowColor: const Color.fromRGBO(0, 0, 0, 0),
+        title: const Text("Surreal Convo"),
+        leading: const Icon(Icons.menu),
+      ),
+    );
   }
 }
