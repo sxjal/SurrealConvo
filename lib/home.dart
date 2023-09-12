@@ -22,11 +22,18 @@ class _HomePageState extends State<HomePage> {
         title: const Text("Surreal Convo"),
         leading: const Icon(Icons.menu),
       ),
-      body: const Column(
+      body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: [
-          ProfileImage(),
+          const ProfileImage(),
+          Container(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 20,
+              vertical: 10,
+            ),
+            margin: const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+          ),
         ],
       ),
     );
