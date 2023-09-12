@@ -20,7 +20,24 @@ class FeatureBox extends StatelessWidget {
         vertical: 10,
       ),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: color,
+        borderRadius: BorderRadius.circular(
+          15,
+        ),
+      ),
+      child: Column(
+        children: [
+          Text(
+            title,
+            style: const TextStyle(
+              color: Colors.white,
+              fontSize: 20,
+            ),
+          ),
+          Text(
+            subtitle,
+          ),
+        ],
       ),
     );
   }

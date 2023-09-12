@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:surrealconvo/feature_box.dart';
 import 'package:surrealconvo/pallete.dart';
 import 'package:surrealconvo/profileimage.dart';
 
@@ -73,9 +74,23 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
-          Column(
+          const Column(
             children: [
-              
+              FeatureBox(
+                color: Colors.black,
+                title: "Chat GPt",
+                subtitle: "Chat GPT",
+              ),
+              FeatureBox(
+                color: Colors.black,
+                title: "Chat GPt",
+                subtitle: "Chat GPT",
+              ),
+              FeatureBox(
+                color: Colors.black,
+                title: "Chat GPt",
+                subtitle: "Chat GPT",
+              ),
             ],
           ),
         ],
