@@ -36,12 +36,38 @@ class _HomePageState extends State<HomePage> {
               top: 30,
             ),
             decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20).copyWith(
+                topLeft: Radius.zero,
+              ),
               border: Border.all(
                 color: Pallete.borderColor,
                 width: 2,
               ),
             ),
-            child: const Text("Good Morning, What can I do for you today?"),
+            child: const Padding(
+              padding: EdgeInsets.all(10.0),
+              child: Text(
+                "Good Morning, What can I do for you today?",
+                style: TextStyle(
+                  color: Pallete.mainFontColor,
+                  fontFamily: 'Cera Pro',
+                  fontSize: 20,
+                ),
+              ),
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.all(10),
+            alignment: Alignment.centerLeft,
+            child: const Text(
+              "Here are a few features",
+              style: TextStyle(
+                color: Pallete.mainFontColor,
+                fontFamily: 'Cera Pro',
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ),
         ],
       ),
