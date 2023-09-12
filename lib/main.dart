@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:surrealconvo/home.dart';
+import 'package:surrealconvo/pallete.dart';
 
 void main() {
   runApp(
-    const MaterialApp(
+    MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Surreal Convo",
-      home: Scaffold(
+      theme: ThemeData.light().copyWith(
+        scaffoldBackgroundColor: Pallete.whiteColor,
+      ),
+      home: const Scaffold(
         body: Center(
           child: HomePage(),
         ),
