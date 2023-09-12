@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:speech_to_text/speech_to_text.dart';
 import 'package:surrealconvo/home.dart';
 import 'package:surrealconvo/pallete.dart';
+import 'package:speech_to_text/speech_recognition_result.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -11,7 +12,10 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final speechtotext = SpeechToText();
+  final speechToText = SpeechToText();
+  bool speechenabled = false;
+  String lastWords = '';
+
   @override
   void initState() {
     super.initState();
@@ -19,8 +23,24 @@ class _HomePageState extends State<HomePage> {
   }
 
   Future<void> initspeechtotext() async {
-    speechtotext.initialize();
+    speechenabled = await speechToText.initialize();
     setState(() {});
+  }
+
+  void startListening() async {
+    await speechToText.listen(onResult: onSpeechResult);
+    setState(() {});
+  }
+
+  void stopListening() async {
+    await speechToText.stop();
+    setState(() {});
+  }
+
+  void onSpeechResult(SpeechRecognitionResult result) {
+    setState(() {
+      lastWords = result.recognizedWords;
+    });
   }
 
   @override
