@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:surrealconvo/home.dart';
 import 'package:surrealconvo/pallete.dart';
+import 'package:surrealconvo/stackwidget.dart';
 
 void main() {
   runApp(
@@ -9,12 +10,12 @@ void main() {
       title: "Surreal Convo",
       theme: ThemeData.light(
         useMaterial3: true,
-       ).copyWith(
+      ).copyWith(
         scaffoldBackgroundColor: Pallete.whiteColor,
       ),
       home: const Scaffold(
         body: Center(
-          child: HomePage(),
+          child: HomeScreenStack(),
         ),
       ),
     ),

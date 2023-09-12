@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:surrealconvo/pallete.dart';
 
 class FeatureBox extends StatelessWidget {
   const FeatureBox({
@@ -15,6 +16,9 @@ class FeatureBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.symmetric(vertical: 20).copyWith(
+        left: 15,
+      ),
       margin: const EdgeInsets.symmetric(
         horizontal: 35,
         vertical: 10,
@@ -26,16 +30,33 @@ class FeatureBox extends StatelessWidget {
         ),
       ),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Text(
-            title,
-            style: const TextStyle(
-              color: Colors.white,
-              fontSize: 20,
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Text(
+              title,
+              textAlign: TextAlign.left,
+              style: const TextStyle(
+                color: Pallete.blackColor,
+                fontFamily: 'Cera Pro',
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
-          Text(
-            subtitle,
+          const SizedBox(
+            height: 3,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(right: 20.0),
+            child: Text(
+              subtitle,
+              style: const TextStyle(
+                fontFamily: 'Cera Pro',
+                color: Pallete.blackColor,
+              ),
+            ),
           ),
         ],
       ),

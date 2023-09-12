@@ -3,27 +3,18 @@ import 'package:surrealconvo/feature_box.dart';
 import 'package:surrealconvo/pallete.dart';
 import 'package:surrealconvo/profileimage.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class HomePageLayer extends StatefulWidget {
+  const HomePageLayer({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<HomePageLayer> createState() => _HomePageLayerState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageLayerState extends State<HomePageLayer> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Pallete.whiteColor,
-      appBar: AppBar(
-        centerTitle: true,
-        backgroundColor: Pallete.whiteColor,
-        foregroundColor: Pallete.blackColor,
-        shadowColor: const Color.fromRGBO(0, 0, 0, 0),
-        title: const Text("Surreal Convo"),
-        leading: const Icon(Icons.menu),
-      ),
-      body: Column(
+    return SingleChildScrollView(
+      child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -77,19 +68,22 @@ class _HomePageState extends State<HomePage> {
           const Column(
             children: [
               FeatureBox(
-                color: Colors.black,
-                title: "Chat GPt",
-                subtitle: "Chat GPT",
+                color: Pallete.firstSuggestionBoxColor,
+                title: "Chat GPT",
+                subtitle:
+                    "A smarter to stay organized and informed with ChatGPT",
               ),
               FeatureBox(
-                color: Colors.black,
-                title: "Chat GPt",
-                subtitle: "Chat GPT",
+                color: Pallete.secondSuggestionBoxColor,
+                title: "DALL-E",
+                subtitle:
+                    "Get inspired and stay creative with your personal assistant powered by DALL-E",
               ),
               FeatureBox(
-                color: Colors.black,
-                title: "Chat GPt",
-                subtitle: "Chat GPT",
+                color: Pallete.thirdSuggestionBoxColor,
+                title: "Smart Voice Assistant",
+                subtitle:
+                    "Get the best of both worlds with a voice assistant powered by DALL-E and CHAT GPT",
               ),
             ],
           ),
