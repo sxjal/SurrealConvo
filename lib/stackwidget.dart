@@ -25,9 +25,14 @@ class _HomePageState extends State<HomePage> {
       body: Stack(
         children: [
           const HomePageLayer(),
-          FloatingActionButton(
-            onPressed: () {},
-            child: const Icon(Icons.mic),
+          Positioned(
+            bottom: 30,
+            right: 30,
+            child: FloatingActionButton(
+              backgroundColor: Pallete.firstSuggestionBoxColor,
+              onPressed: () {},
+              child: const Icon(Icons.mic),
+            ),
           ),
         ],
       ),

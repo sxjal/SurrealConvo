@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:surrealconvo/home.dart';
 import 'package:surrealconvo/pallete.dart';
 import 'package:surrealconvo/stackwidget.dart';
 
@@ -15,7 +14,7 @@ void main() {
       ),
       home: const Scaffold(
         body: Center(
-          child: HomeScreenStack(),
+          child: HomePage(),
         ),
       ),
     ),
