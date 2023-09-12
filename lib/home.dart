@@ -21,6 +21,11 @@ class _HomePageState extends State<HomePage> {
         title: const Text("Surreal Convo"),
         leading: const Icon(Icons.menu),
       ),
+      body: const Column(
+        children: [
+          
+        ],
+      ),
     );
   }
 }
