@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:speech_to_text/speech_to_text.dart';
 import 'package:surrealconvo/home.dart';
 import 'package:surrealconvo/pallete.dart';
 
@@ -10,6 +11,18 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final speechtotext = SpeechToText();
+  @override
+  void initState() {
+    super.initState();
+    initspeechtotext();
+  }
+
+  Future<void> initspeechtotext() async {
+    speechtotext.initialize();
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
