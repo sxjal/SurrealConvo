@@ -44,6 +44,12 @@ class _HomePageState extends State<HomePage> {
   }
 
   @override
+  void dispose() {
+    super.dispose();
+    speechToText.stop();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Pallete.whiteColor,
@@ -63,7 +69,14 @@ class _HomePageState extends State<HomePage> {
             right: 30,
             child: FloatingActionButton(
               backgroundColor: Pallete.firstSuggestionBoxColor,
-              onPressed: () {},
+              onPressed: () async {
+                if (await speechToText.hasPermission &&
+                    speechToText.isNotListening) {
+                  startListening();
+                } else if (speechToText.isListening) {
+                  stopListening();
+                }
+              },
               child: const Icon(Icons.mic),
             ),
           ),
