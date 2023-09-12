@@ -32,7 +32,16 @@ class _HomePageState extends State<HomePage> {
               horizontal: 20,
               vertical: 10,
             ),
-            margin: const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+            margin: const EdgeInsets.symmetric(horizontal: 40).copyWith(
+              top: 30,
+            ),
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: Pallete.borderColor,
+                width: 2,
+              ),
+            ),
+            child: const Text("Good Morning, What can I do for you today?"),
           ),
         ],
       ),
